@@ -1,0 +1,323 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 32px 20px 48px;
+  background: linear-gradient(135deg, #eef6ff 0%, #f5f3ff 100%);
+  color: #1e293b;
+}
+
+.topbar {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.topbar h1 {
+  margin: 6px 0 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toggle-btn,
+.primary-btn,
+.secondary-btn,
+.company-chip {
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toggle-btn {
+  background: #e2e8f0;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 10px 18px;
+}
+
+.toggle-btn[data-active='true'] {
+  background: #4f46e5;
+  color: white;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+}
+
+.form-card,
+.admin-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
+  padding: 28px;
+  backdrop-filter: blur(6px);
+}
+
+.step-indicator {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.step-indicator span {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e2e8f0;
+  color: #334155;
+  font-weight: 700;
+}
+
+.step-indicator span.active {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+}
+
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-heading {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 14px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.field.full-width {
+  grid-column: 1 / -1;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: white;
+  font: inherit;
+  color: #0f172a;
+  box-sizing: border-box;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.eligibility-note {
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.success-text {
+  margin: 0;
+  color: #166534;
+  font-weight: 600;
+}
+
+.warning-text {
+  margin: 0;
+  color: #b45309;
+  font-weight: 600;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.split-actions {
+  justify-content: space-between;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 22px;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  box-shadow: 0 12px 20px rgba(79, 70, 229, 0.2);
+}
+
+.primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.secondary-btn {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.company-chip {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 18px 12px;
+}
+
+.company-chip.selected {
+  background: linear-gradient(135deg, #dcfce7, #dbeafe);
+  border-color: #22c55e;
+  color: #14532d;
+}
+
+.selection-summary {
+  font-size: 1rem;
+  color: #334155;
+}
+
+.alert-box {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+.company-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin: 20px 0 28px;
+}
+
+.company-summary-card {
+  background: linear-gradient(135deg, #eff6ff, #eef2ff);
+  border-radius: 16px;
+  border: 1px solid #c7d2fe;
+  padding: 18px 16px;
+}
+
+.company-summary-card h3,
+.company-group h3 {
+  margin: 0 0 10px;
+  color: #111827;
+}
+
+.company-summary-card p {
+  margin: 0;
+  color: #475569;
+  font-weight: 600;
+}
+
+.admin-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.company-group {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.company-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.company-group li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.92rem;
+}
+
+.empty-state {
+  margin: 0;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card,
+  .admin-panel {
+    padding: 20px 18px;
+  }
+
+  .split-actions,
+  .form-actions {
+    justify-content: stretch;
+  }
+
+  .split-actions .primary-btn,
+  .split-actions .secondary-btn,
+  .form-actions .primary-btn {
+    width: 100%;
+  }
+}
